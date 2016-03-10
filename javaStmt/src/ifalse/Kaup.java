@@ -49,6 +49,7 @@ public class Kaup {
 	}
 
 	public void setResult() {
+		setKaup();					// this.setKaup(); this 생략 가능
 		String temp = "";
 		
 		// 분기문 영역
@@ -69,5 +70,10 @@ public class Kaup {
 		}
 		
 		this.result = temp;
+	}
+	
+	@Override
+	public String toString() {
+		return "Kaup 지수 [이름=" + name + ", 결과=" + result + "]";
 	}
 }

@@ -25,21 +25,16 @@ import javax.xml.transform.Source;
 public class KaupMain {
 	public static void main(String[] args) {
 		// 지역변수 영역
-		int kaup=0;
-		double weight=0.0, height=0.0;
-		String result="", name="";								// "" 리터럴이라고 명명하겠음.
-		
-		System.out.println("이름, 키, 몸무게 입력");
 		Kaup k = new Kaup();
 		Scanner scanner = new Scanner(System.in);
-		k.setName(scanner.next());
-		k.setWeight(scanner.nextInt());
-		k.setHeight(scanner.nextInt());	
-		k.setKaup();
-
-		result = k.getResult();
 		
-		System.out.println(k.getName() + "님은 " + result + "입니다.");
+		System.out.println("이름, 키, 몸무게 입력");
+		k.setName(scanner.next());
+		k.setHeight(scanner.nextInt());	
+		k.setWeight(scanner.nextInt());
+		k.setResult();
+		
+		System.out.println(k.toString());
 	}
 	
 }
