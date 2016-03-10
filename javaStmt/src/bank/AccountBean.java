@@ -18,7 +18,7 @@ public class AccountBean {
 	// 오버라이딩: 덮어쓰기
 	// 오버로딩: 중복정의
 	public AccountBean(String name, int password) {
-		this.accountNo = (int) (Math.random() * 9) + 1;
+		this.accountNo = (int) (Math.random() * 100000) + 100000;
 		this.name = name;
 		this.password = password;
 		this.money = 0;
