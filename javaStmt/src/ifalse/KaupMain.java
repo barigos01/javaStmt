@@ -29,18 +29,17 @@ public class KaupMain {
 		double weight=0.0, height=0.0;
 		String result="", name="";								// "" 리터럴이라고 명명하겠음.
 		
+		System.out.println("이름, 키, 몸무게 입력");
 		Kaup k = new Kaup();
 		Scanner scanner = new Scanner(System.in);
 		k.setName(scanner.next());
 		k.setWeight(scanner.nextInt());
 		k.setHeight(scanner.nextInt());	
 		k.setKaup();
-		
-		System.out.println("이름, 키, 몸무게 입력");
-		
+
 		result = k.getResult();
 		
-		System.out.println(name+ "님은" + result + "입니다.");
+		System.out.println(k.getName() + "님은 " + result + "입니다.");
 	}
 	
 }
