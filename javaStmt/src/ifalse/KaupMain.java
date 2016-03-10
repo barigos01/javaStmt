@@ -34,6 +34,7 @@ public class KaupMain {
 		k.setName(scanner.next());
 		k.setWeight(scanner.nextInt());
 		k.setHeight(scanner.nextInt());	
+		k.setKaup();
 		
 		System.out.println("이름, 키, 몸무게 입력");
 		
