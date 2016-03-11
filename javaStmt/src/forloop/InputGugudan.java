@@ -18,7 +18,16 @@ public class InputGugudan {
 		Scanner scanner = new Scanner(System.in);
 		int i=0, num = 0, gop=0;
 		num = scanner.nextInt();
-		
+
+		if (num<=0) {
+			System.out.println("1 이상 정수값만 입력하시오");
+			return;		// 이 메소드를 종료시켜라
+		}
+		for (i=1; i<10; i++){
+			gop = num * i;
+			System.out.println(num+"*"+i+"="+gop);
+		}
+/**		
 		if (num<=0) {
 			System.out.println("1 이상 정수값만 입력하시오");
 		} else{
@@ -27,6 +36,7 @@ public class InputGugudan {
 				System.out.println(num+"*"+i+"="+gop);
 			}
 		}
+*/
 	}
 
 }

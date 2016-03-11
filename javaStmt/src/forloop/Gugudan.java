@@ -8,18 +8,27 @@ package forloop;
  */
 public class Gugudan {
 	public static void main(String[] args) {
-		System.out.println("2단부터 9단까지 구구단 출력"
+		System.out.println("2단부터 9단까지 구구단 출력. "
 							+"단, 책받침 구구단으로 출력");
-		int i=0, j=0, gop=0;
+		int i=0, j=0, dan=0;
 		
 		for (i = 1; i < 10; i++) {
-			for (j = 2; j < 10; j++) {
-				gop = i * j;
-				System.out.print(j+"*"+i+"="+gop+"\t");
+			for (j = 2; j < 6; j++) {
+				dan = i * j;
+				System.out.print(j+"*"+i+"="+dan+"\t");
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		for (i = 1; i < 10; i++) {
+			for (j = 6; j < 10; j++) {
+				dan = i * j;
+				System.out.print(j+"*"+i+"="+dan+"\t");
 			}
 			System.out.println();
 		}
 		
 	}	
 
-}		
+}
