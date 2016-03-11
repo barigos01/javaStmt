@@ -1,4 +1,4 @@
-package ifalse;
+package ifelse;
 
 public class Kaup {
 	// 속성영역 : field
