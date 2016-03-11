@@ -17,14 +17,16 @@ public class AccountBean {
 	
 	// 오버라이딩: 덮어쓰기
 	// 오버로딩: 중복정의
+
 	public AccountBean(String name, int password) {
-		this.accountNo = (int) (Math.random() * 100000) + 100000;
+		this.accountNo = (int) (Math.random() * 999999) + 100000;
 		this.name = name;
 		this.password = password;
 		this.money = 0;
 	}
-	
 
+	public AccountBean() {}	// 지역변수 용도로 사용하기 위해 오버로딩
+	
 	public int getAccountNo() {
 		return accountNo;
 	}
@@ -53,7 +55,7 @@ public class AccountBean {
 	public void setMoney(int money) {
 		this.money = money;
 	}
-	
+
 	@Override
 	public String toString() {
 		return BANK_NAME + " [계좌번호=" + accountNo 
@@ -62,4 +64,6 @@ public class AccountBean {
 				+ ", 잔액=" + money
 				+ "]";
 	}
+
+	
 }
