@@ -5,24 +5,24 @@ package array;
  * @date 2016. 3. 14.
  * @story 배열의 요소 중 가장 큰 값 출력
  */
-import java.util.Scanner;
 
-public class MaxValue {
-	public static void main(String[] args) {
-/*		Scanner scanner = new Scanner(System.in);
-		System.out.println("정수값 3개를 입력");
-		int a = scanner.nextInt(), b = scanner.nextInt(), c = scanner.nextInt();
+public class MaxValue{
+	int max;
+	
+	public int getMax(int[] arr) {
+		int max = arr[0];
 		
-		int[] arr = new int[];
-*/		
-		int[] arr = new int[3];
-		arr[0] = 1;
-		arr[1] = 2;
-		arr[2] = 3;
-		int[] arr2 = {1,2,3};
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > max) {
+				max = arr[i];
+			}
+		}
 		
-		
-		
-		
+		return max;
 	}
+
+	public void setMax(int max) {
+		this.max = max;
+	}
+
 }
