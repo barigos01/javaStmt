@@ -19,13 +19,20 @@ public class LeapYear {
 		int year = scanner.nextInt();
 		String yearStr = "";
 		
-		if (year % 100 == 0) {		// 100으로 나눠 떨어진다
-			yearStr = "평년";
+		if (year % 4 == 0) {
+			if (year % 100 == 0) {		// 100으로 나눠 떨어진다
+				if (year % 400 == 0) {
+					yearStr = "윤년";
+				} else {
+					yearStr = "평년";
+				}	
+			} else {
+				yearStr = "윤년";
+			}
 		} else {
-			yearStr = "윤년";
+				yearStr = "평년";
 		}
 		
 		System.out.println(year+"는 "+yearStr+" 입니다.");
-		System.out.println(year+"는");
 	}
 }

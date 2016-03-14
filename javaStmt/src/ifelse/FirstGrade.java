@@ -13,20 +13,32 @@ public class FirstGrade {
 		System.out.println("3명의 이름과 점수를 입력하세요.");
 		Scanner scanner = new Scanner(System.in);
 		
-		String aName=scanner.next();
-		int aScore=scanner.nextInt();
+		String aName=scanner.next(), name="";
+		int aScore=scanner.nextInt(), score=0;
 		String bName=scanner.next();
 		int bScore=scanner.nextInt();
 		String cName=scanner.next();
 		int cScore=scanner.nextInt();
 		
-		if (true) {
-			
+		if (aScore>bScore) {
+			if (aScore>cScore) {
+				score = aScore;
+				name = aName;
+			} else {
+				score = cScore;
+				name = cName;
+			}
 		} else {
-
+			if (bScore>cScore) {
+				score = bScore;
+				name = bName;
+			} else {
+				score = cScore;
+				name = cName;
+			}
 		}
 		
-		System.out.println("1등은 홍길동, 90점입니다.");
+		System.out.println("1등은 "+name+", "+score+"점입니다.");
 		
 	}
 }
