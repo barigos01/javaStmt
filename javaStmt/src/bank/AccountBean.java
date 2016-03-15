@@ -24,6 +24,13 @@ public class AccountBean {
 		this.password = password;
 		this.money = 0;
 	}
+	
+	public AccountBean(int accountNo) {
+		this.accountNo = accountNo;
+		this.name = name;
+		this.password = password;
+		this.money = money;
+	}
 
 	public AccountBean() {}	// 지역변수 용도로 사용하기 위해 오버로딩
 	

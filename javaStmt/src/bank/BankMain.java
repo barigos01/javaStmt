@@ -6,7 +6,7 @@ public class BankMain {
 	public static void main(String[] args) {
 		// 지역변수 영역
 		Scanner scanner = new Scanner(System.in);
-		AdminServiecImpl service = new AdminServiecImpl(100);
+		AdminServiecImpl2 service = new AdminServiecImpl2(100);
 		BankServiecImpl bservice = new BankServiecImpl();
 		
 		// 연산영역

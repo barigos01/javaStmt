@@ -1,4 +1,7 @@
 package grade;
+
+import java.util.Vector;
+
 /**
  * CRUD
  * C : create	생성
@@ -8,10 +11,10 @@ package grade;
  * */
 public interface GradeService {
 	// C : 성적표 출력
-	public void input();	// 추상 메소드 (기능을 추상화한다. 속성은 추상화하지않는다.)
+	public void input(GradeBean grade);	// 추상 메소드 (기능을 추상화한다. 속성은 추상화하지않는다.)
 	
 	// R : 성적표 리스트 출력
-	public void getList();
+	public Vector<GradeBean> getList();
 	
 	// R : 성적표 조회(학번)
 	public void getGradeByHak();
