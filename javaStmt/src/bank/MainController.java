@@ -56,13 +56,13 @@ public class MainController {
 					System.out.println(bank.openAccount(new AccountBean(s.next(), s.nextInt()))); 
 					break;
 				case 2:	
-					System.out.println("계좌번호, 비밀번호, 입금액 입력");
-					System.out.println(bank.deposit(new AccountBean(s.nextInt(), s.nextInt(), s.nextInt()))); 
+					System.out.println("계좌번호, 입금액 입력");
+					System.out.println(bank.deposit(s.nextInt(), s.nextInt())); 
 					break;
 					
 				case 3:	
 					System.out.println("계좌번호, 비밀번호, 출금액 입력");
-					System.out.println(bank.withdraw(new AccountBean(s.nextInt(), s.nextInt(), s.nextInt()))); 
+					System.out.println(bank.withdraw(s.nextInt(), s.nextInt(), s.nextInt())); 
 					break;
 				case 4:
 					System.out.println("계좌번호 입력");

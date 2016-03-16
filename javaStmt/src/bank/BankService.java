@@ -10,11 +10,11 @@ public interface BankService {
 	/**
 	 * 입금
 	 */
-	public String deposit(AccountBean account);
+	public String deposit(int accountNo, int money);
 	/**
 	 * 출금
 	 */
-	public String withdraw(AccountBean account);
+	public String withdraw(int accountNo, int password, int money);
 	/**
 	 * 잔액조회
 	 */

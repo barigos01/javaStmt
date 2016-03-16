@@ -24,13 +24,14 @@ public class BankServiceImpl implements BankService{
 	}
 
 	@Override
-	public String deposit(AccountBean account) {
+	public String deposit(int accountNo, int money) {
 		// 입금
 		String result = "입금 실패";
-		AccountBean searchAccount = findMoney(account.getAccountNo());
 		
-		if (accountList.contains(searchAccount)) {
-			searchAccount.setMoney(account.getMoney());
+		account = findMoney(accountNo);
+
+		if (accountList.contains(account)) {
+			account.setMoney(account.getMoney()+money);
 			
 			result = "입금 성공";
 		}
@@ -39,23 +40,17 @@ public class BankServiceImpl implements BankService{
 	}
 
 	@Override
-	public String withdraw(AccountBean account) {
+	public String withdraw(int accountNo, int password, int money) {
 		// 출금
 		String result = "출금 실패";
-		AccountBean searchAccount = findMoney(account.getAccountNo());
-		AccountBean searchPassword = findMoney(account.getPassword());
-		AccountBean searchMoney = findMoney(account.getMoney());
+
+		account = findMoney(accountNo);
 		
-		for (int i = 0; i < accountList.size(); i++) {
-			if (accountList.contains(searchAccount) && accountList.contains(searchPassword)) {
-				if (searchMoney != null) {
-					searchAccount.setMoney(accountList.get(i).getMoney() - account.getMoney());
-					
-					result = "출금 완료";
-				} else {
-					result = "잔액 없음";
-				}
+		if (accountList.contains(account)) {
+			if (account.getPassword() == password) {
+				account.setMoney(account.getMoney() - money);
 				
+				result = "출금 성공";
 			}
 		}
 		

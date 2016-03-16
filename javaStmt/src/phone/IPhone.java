@@ -8,15 +8,23 @@ public class IPhone extends CelPhone{
 	public String getData() {
 		return data;
 	}
-	
-	public void setData(String data) {
-		this.data = data;
+
+	public void setData(String name, String data) {
+		
+		super.setCompany(BRAND);
+		super.setPortable(TRUE);
+		super.setCall(name);
+		
+		this.data = 
+				super.getCompany() + "\t" 
+				+ super.isPortable() + "\t" 
+				+ super.getCall() + "\t" 
+				+ data + " : 메세지 전달";
 	}
 	
-	// 오버로딩
-	public void setData(String data, String name) {
-		this.data = data;
-		// super.
+	@Override
+	public String getCall() {
+		return this.getData();
 	}
 
 }
