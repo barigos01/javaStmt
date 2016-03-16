@@ -1,20 +1,22 @@
 package bank;
 
+import java.util.Vector;
+
 public interface BankService {
 	/**
 	 * 계좌 개설
 	 */
-	public String openAccount(String name, int password);
+	public Vector<AccountBean> openAccount(AccountBean account);
 	/**
 	 * 입금
 	 */
-	public String deposit(int money);
+	public String deposit(AccountBean account);
 	/**
 	 * 출금
 	 */
-	public String withdraw(int money);
+	public String withdraw(AccountBean account);
 	/**
 	 * 잔액조회
 	 */
-	public String findMoney();
+	public AccountBean findMoney(int accountNo);
 }

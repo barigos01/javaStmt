@@ -6,7 +6,7 @@ public interface AdminService {
 	/**
 	 * 계좌 개설
 	 */
-	public void openAccount(AccountBean account);
+	public Vector<AccountBean> openAccount(AccountBean account);
 	/**
 	 * 전체 계좌 목록 출력
 	 * */
@@ -22,7 +22,7 @@ public interface AdminService {
 	/**
 	 * 계좌 해지
 	 * */
-	public String closeAccount(int accountNo);
+	public AccountBean closeAccount(int accountNo);
 	/**
 	 * 전체 계좌수 조회
 	 * */

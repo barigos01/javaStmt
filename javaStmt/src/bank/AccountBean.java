@@ -17,7 +17,8 @@ public class AccountBean {
 	
 	// 오버라이딩: 덮어쓰기
 	// 오버로딩: 중복정의
-
+	public AccountBean() {}	// 지역변수 용도로 사용하기 위해 오버로딩
+	
 	public AccountBean(String name, int password) {
 		this.accountNo = (int) (Math.random() * 999999) + 100000;
 		this.name = name;
@@ -25,14 +26,11 @@ public class AccountBean {
 		this.money = 0;
 	}
 	
-	public AccountBean(int accountNo) {
+	public AccountBean(int accountNo, int password, int money) {
 		this.accountNo = accountNo;
-		this.name = name;
 		this.password = password;
 		this.money = money;
 	}
-
-	public AccountBean() {}	// 지역변수 용도로 사용하기 위해 오버로딩
 	
 	public int getAccountNo() {
 		return accountNo;
