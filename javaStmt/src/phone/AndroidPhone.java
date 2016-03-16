@@ -18,14 +18,17 @@ public class AndroidPhone extends IPhone {
 	}
 	
 	// 오버로딩
-	public void setData(String data, String name, String size) {
+	public void setData(String name, String data, String size) {
 		super.setCompany(BRAND);				// 오버라이딩
 		super.setPortable(TRUE);
 		super.setCall(name);
 		this.setSize(size);
 		
-		this.data = super.getCompany() + "\t" + super.isPortable() + "\t" + super.getCall() + "\t" 
-					+"대화면" + this.getSize() + "로 볼 수 있다" + data + " : 카톡 메세지 전달";
+		this.data = super.getCompany() + "\t" 
+					+ super.isPortable() + "\t" 
+					+ super.getCall() + "\t" 
+					+"대화면" + this.getSize() + "로 볼 수 있다" 
+					+ data + " : 카톡 메세지 전달";
 	}
 	
 	
