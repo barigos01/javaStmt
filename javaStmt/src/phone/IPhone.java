@@ -16,7 +16,7 @@ public class IPhone extends CelPhone{
 	// 오버로딩
 	public void setData(String data, String name) {
 		this.data = data;
-		super.
+		// super.
 	}
 
 }

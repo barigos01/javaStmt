@@ -28,14 +28,14 @@ public class Pass {
 		total = java + jsp + sql + spring;
 		avg = total / 4;
 		
-		switch () {
+		/*switch () {
 		case value: result="합격"; break;
 		case value: result="불합격"; break;
 
 		default:
 			System.out.println("잘 못 입력하셨습니다.");
 			return;
-		}
+		}*/
 		
 		System.out.println("******************************************************************");
 		System.out.println("이름\t JAVA\t JSP\t SQL\t SPRING\t 총점\t 평균\t 합격여부\t");
