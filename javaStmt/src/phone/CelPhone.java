@@ -31,7 +31,6 @@ public class CelPhone extends Phone{
 	
 	@Override
 	public String getCall() {
-		
 		return super.getCall() + " 동시에 " + this.getMove();
 	}
 	

@@ -21,10 +21,5 @@ public class IPhone extends CelPhone{
 				+ super.getCall() + "\t" 
 				+ data + " : 메세지 전달";
 	}
-	
-	@Override
-	public String getCall() {
-		return this.getData();
-	}
 
 }

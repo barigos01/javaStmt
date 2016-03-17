@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class MainController {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		AdminServiceImpl admin = new AdminServiceImpl();
-		BankServiceImpl bank = new BankServiceImpl();
+		AdminService admin = new AdminServiceImpl();
+		BankService bank = new BankServiceImpl();
 			
 		System.out.println("[메뉴] 1.일반인 2.관리자");
 		switch (s.nextInt()) {

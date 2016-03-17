@@ -10,7 +10,6 @@ public class PhoneMain {
 		
 		System.out.println("=== 집전화기로 통화 ===");
 		
-		
 		//pm.usePhone(scanner);
 		//pm.useNokia(scanner);
 		//pm.useIPhone(scanner);
@@ -19,12 +18,16 @@ public class PhoneMain {
 
 	public static void useAndroid(Scanner scanner) {
 		IPhone and = new AndroidPhone();
+		// 객체를 생성하는 자바 방법은 총 3가지가 있음.
+		// 1. 생성자
+		// 2. Deep Copy
+		// 3. Shallow Copy
 		
 		and.setCompany("안드로이드");
 		System.out.println(and.getCompany() + "를 사용");
 		System.out.println("휴대폰으로 통화할 사람과 문자 전송");
 
-		//and.setData(scanner.next(), scanner.next(), scanner.next());
+		((AndroidPhone)and).setData(scanner.next(), scanner.next(), scanner.next());
 		System.out.println(and.getData());
 	}
 
@@ -39,7 +42,7 @@ public class PhoneMain {
 		System.out.println(iPhone.getCall());
 	}
 
-	public void useNokia(Scanner scanner) {
+	public void useNokia(Scanner scanner) {		// 2. Deep Copy
 		Phone nokia = new CelPhone();
 		
 		nokia.setCompany("노키아");

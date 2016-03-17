@@ -16,7 +16,7 @@ public class AndroidPhone extends IPhone {
 	public String getData() {
 		return data;
 	}
-	
+
 	// 오버로딩
 	public void setData(String name, String data, String size) {
 		super.setCompany(BRAND);				// 오버라이딩
@@ -27,9 +27,8 @@ public class AndroidPhone extends IPhone {
 		this.data = super.getCompany() + "\t" 
 					+ super.isPortable() + "\t" 
 					+ super.getCall() + "\t" 
-					+"대화면" + this.getSize() + "로 볼 수 있다" 
-					+ data + " : 카톡 메세지 전달";
+					+ "대화면 " + this.getSize() + "인치로 볼 수 있다" 
+					+ " : 카톡 메세지 전달";
 	}
-	
 	
 }
